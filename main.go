@@ -32,6 +32,11 @@ func task4() {
 	fmt.Printf("hello world, result: %s", result)
 }
 
+func task5() {
+	digits := []int{9}
+	digits = plusOne(digits)
+	fmt.Println("result:", digits)
+}
 func main() {
-	task4()
+	task5()
 }
