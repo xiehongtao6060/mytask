@@ -19,15 +19,19 @@ func task2() {
 }
 
 func task3() {
-
 	s := "()"
-
 	result := isValid(s)
 
 	fmt.Printf("hello world, result: %t", result)
 
 }
 
+func task4() {
+	strs := []string{"flower", "flow", "flight"}
+	result := longestCommonPrefix(strs)
+	fmt.Printf("hello world, result: %s", result)
+}
+
 func main() {
-	task3()
+	task4()
 }
