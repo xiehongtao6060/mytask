@@ -6,31 +6,24 @@ package main
 将大整数加 1，并返回结果的数字数组。
 */
 func plusOne(digits []int) []int {
-	l := len(digits)
+	carry := 1 // 初始进位为1（即要加的1）
 
-	plusOne := 0
-	digits[l-1] = digits[l-1] + 1
-	if digits[l-1] > 9 {
-		digits[l-1] -= 10
-		plusOne = 1
-	} else {
-		plusOne = 0
-	}
-
-	for i := l - 2; i >= 0; i-- {
-		digits[i] = digits[i] + plusOne
-		if digits[i] > 9 {
-			digits[i] -= 10
-			plusOne = 1
+	// 从末尾（最低位）开始处理所有位的进位逻辑
+	for i := len(digits) - 1; i >= 0 && carry > 0; i-- {
+		sum := digits[i] + carry
+		if sum == 10 {
+			digits[i] = 0 // 当前位变为0，进位继续
+			carry = 1
 		} else {
-			plusOne = 0
+			digits[i] = sum // 当前位直接赋值，进位消化
+			carry = 0
 		}
 	}
 
-	if plusOne == 1 {
+	// 若所有位处理完仍有进位（全9情况），在头部插入1
+	if carry == 1 {
 		return append([]int{1}, digits...)
-	} else {
-		return digits
 	}
+	return digits
 
 }
