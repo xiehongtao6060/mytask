@@ -17,6 +17,17 @@ func task2() {
 	}
 
 }
+
+func task3() {
+
+	s := "()"
+
+	result := isValid(s)
+
+	fmt.Printf("hello world, result: %t", result)
+
+}
+
 func main() {
-	task1()
+	task3()
 }
