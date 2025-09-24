@@ -8,6 +8,15 @@ func task1() {
 	fmt.Printf("hello world, result: %d", result)
 }
 
+func task2() {
+	x := 1221
+	if isPalindrome(x) {
+		fmt.Printf("hello world, task2 is true")
+	} else {
+		fmt.Printf("hello world, task2 is false")
+	}
+
+}
 func main() {
 	task1()
 }
