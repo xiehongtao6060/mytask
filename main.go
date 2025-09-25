@@ -67,6 +67,10 @@ func task11() {
 	test11()
 }
 
+func task12() {
+	test12()
+}
+
 func main() {
-	task11()
+	task12()
 }
