@@ -45,6 +45,13 @@ func task6() {
 	fmt.Println("result:", k, nums)
 
 }
+
+func task7() {
+	intervals := [][]int{{1, 3}, {1, 4}}
+	intervals = merge(intervals)
+	fmt.Println("intervals:", intervals)
+
+}
 func main() {
-	task6()
+	task7()
 }
