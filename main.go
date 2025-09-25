@@ -52,6 +52,13 @@ func task7() {
 	fmt.Println("intervals:", intervals)
 
 }
+
+func task9() {
+	var p = 11
+	test9(&p)
+	fmt.Println("p:", p)
+}
+
 func main() {
-	task7()
+	task9()
 }
