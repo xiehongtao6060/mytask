@@ -59,6 +59,10 @@ func task9() {
 	fmt.Println("p:", p)
 }
 
+func task10() {
+	test10()
+}
+
 func main() {
-	task9()
+	task10()
 }
