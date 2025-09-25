@@ -37,6 +37,14 @@ func task5() {
 	digits = plusOne(digits)
 	fmt.Println("result:", digits)
 }
+
+func task6() {
+	nums := []int{0, 0, 1, 1, 1, 2, 2, 3, 3, 4}
+	fmt.Println("input:", nums)
+	k := removeDuplicates(nums)
+	fmt.Println("result:", k, nums)
+
+}
 func main() {
-	task5()
+	task6()
 }
